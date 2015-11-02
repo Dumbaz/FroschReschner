@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FroschReschner
 {
-    public partial class Form1 : Form
+    public partial class Rechner : Form
     {
-        public Form1()
+        public Rechner()
         {
             InitializeComponent();
         }
