@@ -20,9 +20,12 @@ connection_timeout = 90
 random.seed()
 user_agent = random.choice(user_agents)
 
+#this is an instance of an opener, you have to use it, you know?
 opener = urllib2.build_opener()
+#the randomly chosen User-Agent gets added to this opener
 opener.addheaders = [('User-Agent', user_agent)]
 
+#this function is downloading the HTML, or reporting a failure
 def get_url(url, referer_url=None):
     '''Downloads specified URL and returns its contents. Returns false
     on fail.'''
@@ -48,4 +51,5 @@ def get_url(url, referer_url=None):
     print('Maximum number of retries reached.')
     return False
 
+#printing the return of get_url()
 print (get_url("http://www.dotabuff.com"))
